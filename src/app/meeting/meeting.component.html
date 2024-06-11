@@ -1,0 +1,40 @@
+<div class="center">
+
+    <form (ngSubmit)="onSubmit()" #meetingForm="ngForm">
+        <h1>Create a Meeting Schedule</h1>
+        <p class="p3">Please fill in this form to create a meeting</p><br><br>
+        <label for="mtgTopic" class="p4"> Meeting Topic</label><br>
+        <input type="text" id="mtgTopic" name="mtgTopic" placeholder="Enter Meeting Topic" [(ngModel)]="model.topic"
+            required #mtgTopic="ngModel">            
+        <span [hidden]="mtgTopic.valid || mtgTopic.pristine">
+            Meeting topic is Required!
+        </span>
+        <br>
+        <label for="noOfPeople" class="p4">Number of People</label><br>
+        <input type="number" id="noOfPeople" name="noOfPeople" placeholder="Enter Number of People"
+            [(ngModel)]="model.noOfPeople" required #noOfPeople="ngModel">
+            
+        <span [hidden]="noOfPeople.valid || noOfPeople.pristine">
+            No of People is Required!
+        </span>
+        <br>
+        <label for="dateTime" class="p4">Start Time</label><br>
+        <input type="datetime-local" id="dateTime" name="dateTime" 
+            [(ngModel)]="model.startTime" required #dateTime="ngModel">   
+                   
+        <span [hidden]="dateTime.valid || dateTime.pristine">
+            Start time is Required!
+        </span>
+        <br>
+        <input type="submit" value="Submit" [disabled]="!meetingForm.form.valid">
+        <div *ngIf="submitted" >
+            <h2>The following meeting schedule has been created</h2>
+              <p>Meeting Topic : {{ model.topic }}</p>
+              <p>Number Of People : {{ model.noOfPeople }}</p>
+              <p>Start Time : {{ model.startTime }}</p>                         
+              {{newMeeting()  }}   
+              {{meetingForm.reset()}} 
+              <input type="button" value="Create Meeting Schedule" (click)="submitted=false"> 
+          </div>
+    </form>
+</div>

@@ -1,0 +1,52 @@
+<div class="center line-break-block ">
+
+  <form (ngSubmit)="onSubmit()" #clientForm="ngForm">
+    <h1>Create a Client</h1>
+    <p class="p3">Please fill in this form to create a client</p>
+    <label for="name" class="p2"> Name</label><br>
+    <input type="text" id="name" placeholder="Enter Name"  [(ngModel)]="model.name" name="name" required #name="ngModel">
+    <span [hidden]="name.valid || name.pristine">
+      <br>Name is Required!
+    </span>
+    <br>
+    <label for="email" class="p2">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter Email" [(ngModel)]="model.email" required
+      #email="ngModel">
+    <span [hidden]="email.valid || email.pristine">
+      <br>Email is Required!
+    </span>
+    <br>
+    <label for="address" class="p2">Address</label><br>
+    <input type="text" id="address" name="address" placeholder="Enter Address" [(ngModel)]="model.address" required
+      #address="ngModel">
+    <span [hidden]="address.valid || address.pristine">
+      <br>Address is Required!
+    </span>
+    <br>
+    <label for="pwd" class="p2">Password</label><br>
+    <input type="password" id="pwd" name="pwd" placeholder="Enter Password" [(ngModel)]="model.password" required
+      #pwd="ngModel">
+    <span [hidden]="pwd.valid || pwd.pristine">
+      <br>Password is Required!
+    </span>
+    <br>
+    <label for="rPwd" class="p2">Repeat Password</label><br>
+    <input type="password" id="rPwd" name="rPwd" placeholder="Repeat Password" [(ngModel)]="model.password" required
+      #rPwd="ngModel">
+    <span [hidden]="rPwd.valid || rPwd.pristine">
+      <br>Repeat Password is Required!
+    </span>
+    <br>    
+    <input type="submit" value="Register" [disabled]="!clientForm.form.valid"  >
+        <div *ngIf="submitted" >
+          <h2>The following client has been registerd</h2>
+            <p>Name : {{ model.name }}</p>
+            <p>Email : {{ model.email }}</p>
+            <p>Address : {{ model.address }}</p>            
+            {{newClient()  }}   
+            {{clientForm.reset()}}  
+          
+            <input type="button" value="Register a Client" (click)="submitted=false">       
+        </div>
+</form>
+</div>

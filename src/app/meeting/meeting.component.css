@@ -1,0 +1,132 @@
+input[type=text], select {
+    width: 50%;
+    padding: 7px 7px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=number], select {
+    width: 50%;
+    padding: 7px 7px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Styling for submit button*/
+  input[type=submit] {
+    width: 50%;
+    background-color: #2e69c1;
+    color: white;
+    padding: 7px 7px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:large;
+  }  
+  input[type=submit]:hover {
+    background-color: #4c6daf;
+  }
+  /* Center the form div section -- Start */
+  div { 
+    width: 700px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    
+    padding: 20px;
+    margin: 0 auto  
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    top : 50%;
+    left: 50%;
+    background-image: url("/assets/form-background.jpg");
+    border: 3px solid rgb(60, 110, 168); 
+  }
+  
+  
+
+  /* Change font family to Arial */
+  .p1 {
+    font-family: Arial, Helvetica, sans-serif;    
+    color: black;
+  }
+ /* .p2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    float: left;
+    text-indent: 180px;
+    
+  }*/
+  .p3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;  
+    
+  }
+  .p4 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    float: left;
+    
+    
+  }
+  h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    
+  }
+  /* Change placeholder font family to Arial */
+  input::placeholder {
+      font-family: Arial, Helvetica, sans-serif;
+      
+  }
+  /* Styling for datetime-local input type*/
+  input[type=datetime-local], select {
+    width: 100%;
+    padding: 7px 7px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  #mtgTopic,#noOfPeople{
+    width: 100%;
+    padding: 7px 7px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .line-break-block {
+    display: block;
+}
+input[type=button] {
+    width: 50%;
+    background-color: #2e69c1;
+    color: white;
+    padding: 7px 7px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:large;
+  }  
+  input[type=button]:hover {
+    background-color: #4c6daf;
+  }
+  span{
+    color: rgb(87, 4, 4);
+  }
